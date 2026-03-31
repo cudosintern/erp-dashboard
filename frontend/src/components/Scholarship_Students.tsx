@@ -21,7 +21,7 @@ export default function Scholarship_Students() {
 
   useEffect(() => {
     axios
-      .get<ScholarshipData[]>("http://localhost:5000/api/admission/4")
+      .get<ScholarshipData[]>("http://10.91.3.217:5000/api/admission/4")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);

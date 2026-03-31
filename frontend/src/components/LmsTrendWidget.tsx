@@ -16,7 +16,7 @@ export default function LmsTrendWidget() {
 
   const fetchData = () => {
     axios
-      .get(`http://127.0.0.1:8000/api/lms/5?type=${type}`)
+      .get(`http://10.91.3.217:9005/api/lms/5?type=${type}`)
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   };

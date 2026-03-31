@@ -15,7 +15,7 @@ export default function CudosRadarWidget() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/cudos/3")
+      .get("http://10.91.3.217:9005/api/cudos/3")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

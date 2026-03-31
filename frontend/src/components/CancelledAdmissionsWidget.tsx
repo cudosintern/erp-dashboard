@@ -9,7 +9,7 @@ export default function CancelledAdmissionsWidget() {
   const fetchData = () => {
     axios
       .get(
-        `http://127.0.0.1:8000/api/admission/9?start_date=${startDate}&end_date=${endDate}`
+        `http://10.91.3.217:9005/api/admission/9?start_date=${startDate}&end_date=${endDate}`
       )
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));

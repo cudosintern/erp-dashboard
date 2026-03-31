@@ -7,7 +7,7 @@ export default function Fee_Breakdown() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/fee/4")
+      .get("http://10.91.3.217:5000/api/fee/4")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

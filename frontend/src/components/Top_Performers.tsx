@@ -6,7 +6,7 @@ export default function Top_Performers() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/exam/4")
+    axios.get("http://10.91.3.217:5000/api/exam/4")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

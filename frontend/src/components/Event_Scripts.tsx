@@ -15,7 +15,7 @@ export default function Event_Scripts() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/dvs/1")
+      .get("http://10.91.3.217:5000/api/dvs/1")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

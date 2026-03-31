@@ -16,7 +16,7 @@ export default function FeeWidget() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/fee/3")
+      .get("http://10.91.3.217:9005/api/fee/3")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

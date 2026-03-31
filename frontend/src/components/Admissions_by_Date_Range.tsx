@@ -18,7 +18,7 @@ export default function Admissions_by_Date_Range() {
   const fetchData = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/admission/2?start=${start}&end=${end}`
+        `http://10.91.3.217:5000/api/admission/2?start=${start}&end=${end}`
       );
       setData(res.data);
     } catch (err) {

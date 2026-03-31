@@ -18,7 +18,7 @@ export default function Fee_Collection_Trend() {
   const fetchData = async (selectedType: string) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/fee/1/${selectedType}`
+        `http://10.91.3.217:5000/api/fee/1/${selectedType}`
       );
       setData(res.data);
     } catch (error) {

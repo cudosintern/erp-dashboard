@@ -8,7 +8,7 @@ export default function CudosWidget() {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/cudos/4")
+    axios.get("http://10.91.3.217:9005/api/cudos/4")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

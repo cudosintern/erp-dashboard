@@ -12,7 +12,7 @@ export default function Performance_Score() {
 
   useEffect(() => {
     axios
-      .get<KpiData[]>("http://localhost:5000/api/lms/1")
+      .get<KpiData[]>("http://10.91.3.217:5000/api/lms/1")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);

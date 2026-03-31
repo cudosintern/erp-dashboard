@@ -7,7 +7,7 @@ export default function StockGaugeWidget() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/exam/8")
+      .get("http://10.91.3.217:9005/api/exam/8")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

@@ -6,14 +6,14 @@ export default function ReadmittedStudentsWidget() {
   const [data, setData] = useState([]);
 
   // useEffect(() => {
-  //   fetch("http://127.0.0.1:8000/api/admission/readmitted-students")
+  //   fetch("http://10.91.3.217:9005/api/admission/readmitted-students")
   //     .then((res) => res.json())
   //     .then((data) => setData(data));
   // }, []);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/admission/3") // 👈 mock API
+      .get("http://10.91.3.217:5000/api/admission/3") // 👈 mock API
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

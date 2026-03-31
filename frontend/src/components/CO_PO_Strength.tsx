@@ -17,7 +17,7 @@ export default function CO_PO_Strength() {
   const fetchData = async (selectedBatch: string) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/cudos/2/${selectedBatch}`
+        `http://10.91.3.217:5000/api/cudos/2/${selectedBatch}`
       );
       setData(res.data);
     } catch (err) {

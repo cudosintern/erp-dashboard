@@ -7,7 +7,7 @@ export default function QPBankWidget() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/exam/9")
+      .get("http://10.91.3.217:9005/api/exam/9")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

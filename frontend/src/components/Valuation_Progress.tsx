@@ -7,7 +7,7 @@ export default function Valuation_Progress() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/exam/7")
+      .get("http://10.91.3.217:5000/api/exam/7")
       .then((res) => setData(res.data[0]))
       .catch((err) => console.error(err));
   }, []);

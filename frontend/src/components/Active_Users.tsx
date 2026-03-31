@@ -6,7 +6,7 @@ export default function Active_Users() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/dvs/3")
+      .get("http://10.91.3.217:5000/api/dvs/3")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);

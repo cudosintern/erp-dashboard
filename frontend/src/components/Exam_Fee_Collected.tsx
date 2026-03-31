@@ -15,7 +15,7 @@ export default function Exam_Fee_Collected() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/exam/10")
+      .get("http://10.91.3.217:5000/api/exam/10")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);

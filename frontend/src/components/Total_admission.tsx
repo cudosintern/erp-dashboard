@@ -6,7 +6,7 @@ export default function TotalAdmissionCard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/admission/1")
+      .get("http://10.91.3.217:5000/api/admission/1")
       .then((res) => setData(res.data[0]))
       .catch((err) => console.error(err));
   }, []);

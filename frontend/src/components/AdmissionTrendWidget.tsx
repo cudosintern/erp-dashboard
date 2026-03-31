@@ -16,7 +16,7 @@ export default function AdmissionTrendWidget() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api/admission/3?type=${filter}`)
+      .get(`http://10.91.3.217:9005/api/admission/3?type=${filter}`)
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, [filter]); // 👈 runs when filter changes

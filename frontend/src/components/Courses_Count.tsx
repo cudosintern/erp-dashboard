@@ -17,7 +17,7 @@ export default function Courses_Count() {
   useEffect(() => {
     axios
       // ✅ Type API response
-      .get<CourseData[]>("http://localhost:5000/api/cudos/1")
+      .get<CourseData[]>("http://10.91.3.217:5000/api/cudos/1")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
