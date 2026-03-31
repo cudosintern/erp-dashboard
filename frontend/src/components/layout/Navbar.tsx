@@ -6,7 +6,7 @@ const Navbar = () => {
       {/* Left Section: Logo and Brand */}
       <div className="flex items-center gap-2">
         <GraduationCap size={32} />
-        <span className="text-xl font-bold tracking-tight">ABC University</span>
+        <span className="text-xl font-bold tracking-tight">IonIdea University</span>
       </div>
 
       {/* Right Section: Actions */}
