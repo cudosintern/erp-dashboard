@@ -1,0 +1,52 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
+
+export default function FeeRefundWidget() {
+  const [data, setData] = useState<any[]>([]);
+
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/api/fee/5")
+      .then((res) => setData(res.data))
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (!data.length) return <p className="p-4">Loading...</p>;
+
+  return (
+    <div className="p-4 bg-white rounded-2xl shadow-md w-full">
+      <h2 className="text-lg font-semibold mb-4">
+        Fee Refund / Cancelled 
+      </h2>
+
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
+
+          {/* X Axis */}
+          <XAxis dataKey="category" />
+
+          {/* Y Axis */}
+          <YAxis />
+
+          {/* Tooltip */}
+          <Tooltip formatter={(value) => `${value}`} />
+        
+          {/* Bar */}
+          <Bar dataKey="value" fill="#ef4444" label />
+          <Bar dataKey="value" fill="#36454F" />
+        </BarChart>
+      </ResponsiveContainer>
+      
+    </div>
+  );
+}

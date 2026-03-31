@@ -1,0 +1,10 @@
+@import "tailwindcss";
+body{
+    background-color: #f4fffe74;
+}
+
+.container{
+    background-color: rgb(8, 135, 198);
+    width: 800px;
+    height: 350px;
+}
